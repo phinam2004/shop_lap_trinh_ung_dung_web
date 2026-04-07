@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\SV22T1020555.Admin.props" />
-</Project>

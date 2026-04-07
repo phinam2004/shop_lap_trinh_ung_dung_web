@@ -147,7 +147,7 @@
             Thông tin giao hàng
         </h5>
         <div class="card-tools">
-            @if (Model.Status == OrderStatusEnum.New)
+            @if (Model.Status == OrderStatusEnum.New || Model.Status == OrderStatusEnum.Accepted)
             {
                 <a href="~/Order/EditDetail/@Model.OrderID" class="btn btn-sm btn-primary open-modal">
                     <i class="bi bi-pencil me-1"></i>

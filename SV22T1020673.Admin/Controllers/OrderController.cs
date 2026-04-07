@@ -116,8 +116,8 @@ namespace SV22T1020673.Admin.Controllers
             if (order == null)
                 return Json(new ApiResult(0, "Đơn hàng không tồn tại"));
 
-            if (order.Status != OrderStatusEnum.New)
-                return Json(new ApiResult(0, "Chỉ được sửa đơn hàng khi ở trạng thái 'Vừa khởi tạo'"));
+            if (order.Status != OrderStatusEnum.New && order.Status != OrderStatusEnum.Accepted)
+                return Json(new ApiResult(0, "Chỉ được sửa đơn hàng khi ở trạng thái 'Vừa khởi tạo' hoặc 'Đã duyệt'"));
 
             return PartialView(order);
         }

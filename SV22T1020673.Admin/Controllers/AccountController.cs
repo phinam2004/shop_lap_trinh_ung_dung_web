@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SV22T1020673.BusinessLayers;
 using SV22T1020673.Models.Security;
+using System.Text.RegularExpressions;
 
 namespace SV22T1020673.Admin.Controllers
 {
@@ -107,6 +108,13 @@ namespace SV22T1020673.Admin.Controllers
             if (newPassword != confirmPassword)
             {
                 ModelState.AddModelError("Error", "Xác nhận mật khẩu mới không khớp");
+                return View();
+            }
+
+            // Kiểm tra độ phức tạp của mật khẩu
+            if (!Regex.IsMatch(newPassword, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$"))
+            {
+                ModelState.AddModelError("Error", "Mật khẩu phải có ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt");
                 return View();
             }
 

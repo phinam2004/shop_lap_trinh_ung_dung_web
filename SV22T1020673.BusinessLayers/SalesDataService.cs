@@ -87,7 +87,7 @@ namespace SV22T1020673.BusinessLayers
             var order = await orderDB.GetAsync(data.OrderID);
             if (order == null)
                 return false;
-            if (order.Status != OrderStatusEnum.New)
+            if (order.Status != OrderStatusEnum.New && order.Status != OrderStatusEnum.Accepted)
                 return false;
 
             return await orderDB.UpdateAsync(data);

@@ -7,6 +7,7 @@ using SV22T1020673.Models.Partner;
 using SV22T1020673.Models.DataDictionary;
 using SV22T1020673.Models.Security;
 using System.Security.Claims;
+using System.Text.RegularExpressions;
 
 namespace SV22T1020673.Shop.Controllers
 {
@@ -71,6 +72,10 @@ namespace SV22T1020673.Shop.Controllers
         {
             if (password != confirmPassword)
                 return Json(new { success = false, message = "Mật khẩu xác nhận không khớp" });
+
+            // Kiểm tra độ phức tạp của mật khẩu
+            if (!Regex.IsMatch(password, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$"))
+                return Json(new { success = false, message = "Mật khẩu phải có ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt" });
 
             if (string.IsNullOrWhiteSpace(email))
                 return Json(new { success = false, message = "Vui lòng điền email" });
@@ -158,6 +163,13 @@ namespace SV22T1020673.Shop.Controllers
             if (newPassword != confirmPassword)
             {
                 ModelState.AddModelError("confirmPassword", "Mật khẩu xác nhận không khớp");
+                return View();
+            }
+
+            // Kiểm tra độ phức tạp của mật khẩu
+            if (!Regex.IsMatch(newPassword, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$"))
+            {
+                ModelState.AddModelError("newPassword", "Mật khẩu phải có ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt");
                 return View();
             }
 
