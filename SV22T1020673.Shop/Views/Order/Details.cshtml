@@ -40,10 +40,10 @@
                                 _ => "bg-secondary-subtle text-secondary"
                             };
                             string statusName = Model.Status switch {
-                                SV22T1020673.Models.Sales.OrderStatusEnum.New => "Vừa khởi tạo",
+                                SV22T1020673.Models.Sales.OrderStatusEnum.New => "Đang chờ xử lý",
                                 SV22T1020673.Models.Sales.OrderStatusEnum.Accepted => "Đã duyệt",
                                 SV22T1020673.Models.Sales.OrderStatusEnum.Shipping => "Đang giao hàng",
-                                SV22T1020673.Models.Sales.OrderStatusEnum.Completed => "Thành công",
+                                SV22T1020673.Models.Sales.OrderStatusEnum.Completed => "Giao hàng thành công",
                                 SV22T1020673.Models.Sales.OrderStatusEnum.Cancelled => "Đã hủy",
                                 SV22T1020673.Models.Sales.OrderStatusEnum.Rejected => "Bị từ chối",
                                 _ => "Không xác định"
@@ -184,7 +184,12 @@
                                         }
                                     </div>
                                     <div class="sv-timeline-content">
-                                        <h6 class="fw-bold mb-0 small">@statusName</h6>
+                                        @{
+                                            string finalStepTitle = "Giao hàng thành công";
+                                            if (Model.Status == SV22T1020673.Models.Sales.OrderStatusEnum.Cancelled) finalStepTitle = "Đã hủy";
+                                            else if (Model.Status == SV22T1020673.Models.Sales.OrderStatusEnum.Rejected) finalStepTitle = "Bị từ chối";
+                                        }
+                                        <h6 class="fw-bold mb-0 small">@finalStepTitle</h6>
                                         <p class="text-muted mb-1" style="font-size: 0.75rem;">Đơn hàng đã kết thúc hành trình</p>
                                         @if (Model.FinishedTime != null) {
                                             <small class="fw-medium d-block" style="font-size: 0.7rem;"><i class="fa-regular fa-clock me-1"></i>@Model.FinishedTime?.ToString("dd/MM/yyyy HH:mm")</small>
