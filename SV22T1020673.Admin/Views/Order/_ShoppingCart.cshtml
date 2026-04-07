@@ -1,0 +1,69 @@
+@model IEnumerable<SV22T1020673.Models.Sales.CartItem>
+@{
+    Layout = null;
+    decimal total = 0;
+    int index = 0;
+}
+
+<table class="table table-bordered table-hover align-middle">
+    <thead class="table-success">
+        <tr>
+            <th class="text-center">#</th>
+            <th style="width:40%">Tên hàng</th>
+            <th class="text-center" style="width:100px">ĐVT</th>
+            <th class="text-center" style="width:100px">SL</th>
+            <th class="text-end" style="width:150px">Giá</th>
+            <th class="text-end" style="width:150px">Thành tiền</th>
+            <th style="width:80px"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            foreach (var item in Model)
+            {
+                index++;
+                total += item.TotalPrice;
+                <tr>
+                    <td class="text-center">@index</td>
+                    <td>@item.ProductName</td>
+                    <td class="text-center">@item.Unit</td>
+                    <td class="text-center">@item.Quantity</td>
+                    <td class="text-end">@item.SalePrice.ToString("N0")</td>
+                    <td class="text-end">@item.TotalPrice.ToString("N0")</td>
+                    <td class="text-end text-nowrap">
+                        <a class="btn btn-sm btn-primary open-modal" href="~/Order/EditCartItem?productId=@item.ProductID">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                        <a class="btn btn-sm btn-danger open-modal" href="~/Order/DeleteCartItem?productId=@item.ProductID">
+                            <i class="bi bi-dash"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="7" class="text-center text-muted py-3">
+                    Giỏ hàng trống
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <th colspan="5" class="text-end">Tổng cộng:</th>
+            <th class="text-end">@total.ToString("N0")</th>
+            <th></th>
+        </tr>
+    </tfoot>
+</table>
+
+<div class="text-end">
+    <a class="btn btn-sm btn-danger mt-2 open-modal"                               
+       href="~/Order/ClearCart">
+        <i class="bi bi-trash"></i>
+        Xóa giỏ hàng
+    </a>
+</div>

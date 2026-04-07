@@ -1,0 +1,116 @@
+D:\MChn\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\appsettings.Development.json
+D:\MChn\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\appsettings.json
+D:\MChn\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\SV22T1020555.Admin.staticwebassets.runtime.json
+D:\MChn\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\SV22T1020555.Admin.exe
+D:\MChn\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\SV22T1020555.Admin.deps.json
+D:\MChn\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\SV22T1020555.Admin.runtimeconfig.json
+D:\MChn\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\SV22T1020555.Admin.dll
+D:\MChn\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\SV22T1020555.Admin.pdb
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.GeneratedMSBuildEditorConfig.editorconfig
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.AssemblyInfoInputs.cache
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.AssemblyInfo.cs
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.csproj.CoreCompileInputs.cache
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.MvcApplicationPartsAssemblyInfo.cache
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.RazorAssemblyInfo.cache
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.RazorAssemblyInfo.cs
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\staticwebassets.build.json
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\staticwebassets.development.json
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\staticwebassets\msbuild.SV22T1020555.Admin.Microsoft.AspNetCore.StaticWebAssets.props
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\staticwebassets\msbuild.build.SV22T1020555.Admin.props
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.SV22T1020555.Admin.props
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.SV22T1020555.Admin.props
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\staticwebassets.pack.json
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\scopedcss\bundle\SV22T1020555.Admin.styles.css
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\scopedcss\projectbundle\SV22T1020555.Admin.bundle.scp.css
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.dll
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\refint\SV22T1020555.Admin.dll
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.pdb
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.genruntimeconfig.cache
+D:\MChn\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\ref\SV22T1020555.Admin.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\appsettings.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\SV22T1020555.Admin.staticwebassets.runtime.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\SV22T1020555.Admin.staticwebassets.endpoints.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\SV22T1020555.Admin.exe
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\SV22T1020555.Admin.deps.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\SV22T1020555.Admin.runtimeconfig.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\SV22T1020555.Admin.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\SV22T1020555.Admin.pdb
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\Dapper.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\System.ClientModel.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\SV22T1020555.BusinessLayers.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\SV22T1020555.DataLayers.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\SV22T1020555.Models.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\SV22T1020555.BusinessLayers.pdb
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\SV22T1020555.DataLayers.pdb
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\bin\Debug\net8.0\SV22T1020555.Models.pdb
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.csproj.AssemblyReference.cache
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.AssemblyInfoInputs.cache
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.AssemblyInfo.cs
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.csproj.CoreCompileInputs.cache
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.RazorAssemblyInfo.cache
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.RazorAssemblyInfo.cs
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\scopedcss\bundle\SV22T1020555.Admin.styles.css
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\scopedcss\projectbundle\SV22T1020555.Admin.bundle.scp.css
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T102.F3942FBB.Up2Date
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\refint\SV22T1020555.Admin.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.pdb
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\SV22T1020555.Admin.genruntimeconfig.cache
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Admin\obj\Debug\net8.0\ref\SV22T1020555.Admin.dll

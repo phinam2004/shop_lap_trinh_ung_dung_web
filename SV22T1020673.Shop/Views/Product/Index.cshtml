@@ -1,0 +1,194 @@
+@model SV22T1020673.Models.Common.PagedResult<SV22T1020673.Models.Catalog.Product>
+@{
+    ViewData["Title"] = "Danh sách sản phẩm";
+    var categories = ViewBag.Categories as List<SV22T1020673.Models.Catalog.Category>;
+}
+
+<div class="animate-fade-in">
+    <div class="row g-4">
+        <!-- Sidebar Filters -->
+        <div class="col-lg-3">
+            <div class="card p-4 border-0 shadow-sm rounded-4 sticky-top" style="top: 100px; z-index: 10;">
+                <h5 class="fw-bold mb-4">Bộ lọc tìm kiếm</h5>
+                <form asp-action="Index" method="get" id="searchForm">
+                    <div class="mb-4">
+                        <label class="form-label small fw-bold text-muted text-uppercase">Tên sản phẩm</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light border-0"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
+                            <input name="SearchValue" type="text" class="form-control border-0 bg-light" 
+                                   placeholder="Tìm kiếm..." value="@Context.Request.Query["SearchValue"]" />
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label small fw-bold text-muted text-uppercase">Loại hàng</label>
+                        <select name="CategoryID" class="form-select border-0 bg-light">
+                            <option value="0">Tất cả loại hàng</option>
+                            @if (categories != null)
+                            {
+                                foreach (var cat in categories)
+                                {
+                                    <option value="@cat.CategoryID" selected="@(Context.Request.Query["CategoryID"] == cat.CategoryID.ToString())">
+                                        @cat.CategoryName
+                                    </option>
+                                }
+                            }
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label small fw-bold text-muted text-uppercase">Khoảng giá (VNĐ)</label>
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <input type="number" name="MinPrice" class="form-control form-control-sm border-0 bg-light" 
+                                       placeholder="Từ" value="@Context.Request.Query["MinPrice"]">
+                            </div>
+                            <div class="col-6">
+                                <input type="number" name="MaxPrice" class="form-control form-control-sm border-0 bg-light" 
+                                       placeholder="Đến" value="@Context.Request.Query["MaxPrice"]">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 shadow-sm mt-2 rounded-3">
+                        <i class="fa-solid fa-filter me-2"></i>Áp dụng
+                    </button>
+                    
+                    <a href="@Url.Action("Index")" class="btn btn-link w-100 text-decoration-none text-muted small mt-2">
+                        Xóa tất cả bộ lọc
+                    </a>
+                </form>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="col-lg-9">
+            <div class="d-flex justify-content-between align-items-center mb-4 ps-2">
+                <p class="text-muted mb-0">Tìm thấy <span class="fw-bold text-dark">@Model.RowCount</span> sản phẩm</p>
+                <div class="d-flex gap-2">
+                    <select class="form-select form-select-sm border-0 bg-white shadow-sm" style="width: auto;">
+                        <option>Mới nhất</option>
+                        <option>Giá thấp đến cao</option>
+                        <option>Giá cao đến thấp</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                @if (Model.DataItems.Any())
+                {
+                    foreach (var item in Model.DataItems)
+                    {
+                        <div class="col-md-4 fade-in">
+                            <div class="card h-100 product-card border-0 shadow-sm rounded-4 overflow-hidden">
+                                <div class="position-relative overflow-hidden" style="padding-top: 100%;">
+                                    <img src="@(string.IsNullOrEmpty(item.Photo) ? WebConfig.ImageServerUrl + "/images/products/nophoto.png" : $"{WebConfig.ImageServerUrl}/images/products/{item.Photo}")" 
+                                     class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover transition-all" alt="@item.ProductName" onerror="this.src='@(WebConfig.ImageServerUrl + "/images/products/nophoto.png")'">
+                                    <div class="product-overlay">
+                                        <div class="d-flex gap-2">
+                                            <a href="@Url.Action("Detail", new { id = item.ProductID })" class="btn btn-light rounded-circle p-3 shadow">
+                                                <i class="fa-solid fa-eye text-primary"></i>
+                                            </a>
+                                            <form action="@Url.Action("Add", "Cart")" method="post" class="d-inline">
+                                                <input type="hidden" name="id" value="@item.ProductID" />
+                                                <button type="submit" class="btn btn-primary rounded-circle p-3 shadow">
+                                                    <i class="fa-solid fa-cart-plus text-white"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    @if (item.Price < 1000000) {
+                                        <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow-sm fw-bold">Hot Sale</span>
+                                    }
+                                </div>
+                                <div class="card-body p-4 text-center">
+                                    <h6 class="fw-bold mb-1 text-truncate">
+                                        <a href="@Url.Action("Detail", new { id = item.ProductID })" class="text-decoration-none text-dark">@item.ProductName</a>
+                                    </h6>
+                                    <p class="text-muted small mb-3">@item.Unit</p>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <span class="fw-bold text-primary fs-5">@item.Price.ToString("N0") <small>đ</small></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="col-12 text-center py-5">
+                        <div class="mb-4"><i class="fa-solid fa-box-open fs-1 text-muted opacity-25" style="font-size: 5rem !important;"></i></div>
+                        <h4 class="text-muted">Không tìm thấy sản phẩm nào</h4>
+                        <p class="text-muted small">Vui lòng thử lại với từ khóa khác hoặc xóa bộ lọc.</p>
+                        <a href="@Url.Action("Index")" class="btn btn-primary px-4 py-2 mt-3 rounded-pill">Quay lại danh sách</a>
+                    </div>
+                }
+            </div>
+
+            <!-- Pagination -->
+            @if (Model.PageCount > 1)
+            {
+                var displayPages = Model.GetDisplayPages(2);
+                var searchValue = Context.Request.Query["SearchValue"];
+                var categoryID = Context.Request.Query["CategoryID"];
+                var minPrice = Context.Request.Query["MinPrice"];
+                var maxPrice = Context.Request.Query["MaxPrice"];
+
+                <nav class="mt-5 pt-3">
+                    <ul class="pagination justify-content-center align-items-center">
+                        <!-- Nút Trước -->
+                        <li class="page-item @(Model.HasPreviousPage ? "" : "disabled")">
+                            <a class="page-link border-0 shadow-sm mx-1 rounded-3 py-2 px-3" 
+                               href="@Url.Action("Index", new { Page = Model.Page - 1, SearchValue = searchValue, CategoryID = categoryID, MinPrice = minPrice, MaxPrice = maxPrice })">
+                               <i class="fa-solid fa-chevron-left small me-2 mt-1"></i>Trước
+                            </a>
+                        </li>
+                        
+                        <!-- Danh sách trang -->
+                        @foreach (var pageItem in displayPages)
+                        {
+                            if (pageItem.IsEllipsis)
+                            {
+                                <li class="page-item disabled">
+                                    <span class="page-link border-0 bg-transparent px-3 text-muted">...</span>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="page-item @(pageItem.IsCurrent ? "active" : "")">
+                                    <a class="page-link border-0 shadow-sm mx-1 rounded-3 fw-bold py-2 px-3" 
+                                       href="@Url.Action("Index", new { Page = pageItem.Page, SearchValue = searchValue, CategoryID = categoryID, MinPrice = minPrice, MaxPrice = maxPrice })">@pageItem.Page</a>
+                                </li>
+                            }
+                        }
+                        
+                        <!-- Nút Sau -->
+                        <li class="page-item @(Model.HasNextPage ? "" : "disabled")">
+                            <a class="page-link border-0 shadow-sm mx-1 rounded-3 py-2 px-3" 
+                               href="@Url.Action("Index", new { Page = Model.Page + 1, SearchValue = searchValue, CategoryID = categoryID, MinPrice = minPrice, MaxPrice = maxPrice })">
+                               Sau<i class="fa-solid fa-chevron-right small ms-2 mt-1"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    .product-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .product-card:hover { transform: translateY(-10px); box-shadow: 0 1rem 3rem rgba(0,0,0,0.12) !important; }
+    .product-overlay {
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.2); backdrop-filter: blur(2px);
+        display: flex; align-items: center; justify-content: center;
+        opacity: 0; transition: opacity 0.3s ease;
+    }
+    .product-card:hover .product-overlay { opacity: 1; }
+    .page-link { color: var(--text-main); padding: 0.75rem 1.25rem; }
+    .active .page-link { background-color: var(--primary) !important; color: white; }
+    .object-fit-cover { object-fit: cover; }
+    .transition-all { transition: all 0.5s ease; }
+    .product-card:hover img { transform: scale(1.1); }
+</style>

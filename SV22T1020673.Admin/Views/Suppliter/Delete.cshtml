@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "Xóa nhà cung cấp";
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-12">
+        <div class="card card-danger card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <i class="bi bi-exclamation-triangle me-2"></i>
+                    Xác nhận xóa nhà cung cấp
+                </h3>
+            </div>
+
+            <div class="card-body">
+                <div class="alert alert-warning">
+                    <i class="bi bi-exclamation-circle me-1"></i>
+                    Bạn đang chuẩn bị xóa nhà cung cấp. Thao tác này <strong>không thể hoàn tác</strong>.
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label fw-semibold">Tên nhà cung cấp</label>
+                        <div class="form-control-plaintext">
+                            Công ty ABC
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-semibold">Tên giao dịch</label>
+                        <div class="form-control-plaintext">
+                            ABC Trading
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label fw-semibold">Điện thoại</label>
+                        <div class="form-control-plaintext">
+                            0901 234 567
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label fw-semibold">Email</label>
+                        <div class="form-control-plaintext">
+                            contact@abc.com
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label fw-semibold">Tỉnh / Thành</label>
+                        <div class="form-control-plaintext">
+                            TP. Huế
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label fw-semibold">Địa chỉ</label>
+                        <div class="form-control-plaintext">
+                            123 Lê Lợi, TP. Huế
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form method="post" action="">
+                <div class="card-footer text-end">
+                    <button type="submit" class="btn btn-danger">
+                        <i class="bi bi-trash me-1"></i>
+                        Xóa nhà cung cấp
+                    </button>
+                    <a href="/Suppliter" class="btn btn-secondary ms-2">
+                        <i class="bi bi-arrow-left me-1"></i>
+                        Hủy bỏ
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

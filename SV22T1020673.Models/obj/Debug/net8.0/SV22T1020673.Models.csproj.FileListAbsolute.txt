@@ -1,0 +1,11 @@
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.Models\bin\Debug\net8.0\SV22T1020673.Models.deps.json
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.Models\bin\Debug\net8.0\SV22T1020673.Models.dll
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.Models\bin\Debug\net8.0\SV22T1020673.Models.pdb
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.Models\obj\Debug\net8.0\SV22T1020673.Models.GeneratedMSBuildEditorConfig.editorconfig
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.Models\obj\Debug\net8.0\SV22T1020673.Models.AssemblyInfoInputs.cache
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.Models\obj\Debug\net8.0\SV22T1020673.Models.AssemblyInfo.cs
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.Models\obj\Debug\net8.0\SV22T1020673.Models.csproj.CoreCompileInputs.cache
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.Models\obj\Debug\net8.0\SV22T1020673.Models.dll
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.Models\obj\Debug\net8.0\refint\SV22T1020673.Models.dll
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.Models\obj\Debug\net8.0\SV22T1020673.Models.pdb
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.Models\obj\Debug\net8.0\ref\SV22T1020673.Models.dll

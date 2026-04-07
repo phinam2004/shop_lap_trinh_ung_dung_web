@@ -1,0 +1,145 @@
+@model SV22T1020673.Shop.Models.HomeViewModel
+@{
+    ViewData["Title"] = "Trang chủ";
+
+    // Helper to get icons for common categories
+    string GetCategoryIcon(string name) {
+        name = name.ToLower();
+        if (name.Contains("điện thoại") || name.Contains("tablet")) return "fa-mobile-screen-button";
+        if (name.Contains("laptop") || name.Contains("máy tính")) return "fa-laptop";
+        if (name.Contains("điện gia dụng") || name.Contains("tủ lạnh")) return "fa-plug-circle-bolt";
+        if (name.Contains("sách") || name.Contains("nhà sách")) return "fa-book";
+        if (name.Contains("thời trang") || name.Contains("quần áo")) return "fa-shirt";
+        if (name.Contains("mỹ phẩm") || name.Contains("làm đẹp")) return "fa-sparkles";
+        if (name.Contains("đồ chơi") || name.Contains("mẹ & bé")) return "fa-teddy-bear";
+        if (name.Contains("ô tô") || name.Contains("xe máy")) return "fa-motorcycle";
+        if (name.Contains("thực phẩm") || name.Contains("bách hóa")) return "fa-basket-shopping";
+        return "fa-layer-group";
+    }
+}
+
+<div class="container sv-home-container animate-fade-in">
+    <!-- Sidebar: Danh mục -->
+    <aside class="sv-sidebar">
+        <h2 class="sv-sidebar-title">Danh mục</h2>
+        <ul class="sv-category-list">
+            @foreach (var cat in Model.Categories)
+            {
+                <li class="sv-category-item">
+                    <a asp-controller="Product" asp-action="Index" asp-route-categoryID="@cat.CategoryID">
+                        <i class="fa-solid @GetCategoryIcon(cat.CategoryName)"></i>
+                        <span>@cat.CategoryName</span>
+                    </a>
+                </li>
+            }
+            @if (!Model.Categories.Any())
+            {
+                <li class="p-3 text-muted small text-center">Đang cập nhật danh mục...</li>
+            }
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="sv-main-content">
+        <!-- Banner Carousel -->
+        <div class="sv-banner-wrapper">
+            <div id="SVBanner" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#SVBanner" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#SVBanner" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#SVBanner" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/images/banners/banner1.png" class="d-block w-100" alt="Electronics Sale">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/banners/banner2.png" class="d-block w-100" alt="Fashion Style">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/banners/banner3.png" class="d-block w-100" alt="Home Appliance">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#SVBanner" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#SVBanner" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+
+        <!-- Products Section -->
+        <div class="bg-white p-3 rounded-3 shadow-sm mb-5">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold mb-0">Gợi ý hôm nay</h5>
+                <a asp-controller="Product" asp-action="Index" class="text-primary text-decoration-none small fw-bold">Xem thêm</a>
+            </div>
+
+            <div class="product-grid-SV">
+                @if (Model.Products != null && Model.Products.Any())
+                {
+                    foreach (var item in Model.Products)
+                    {
+                        var random = new Random(item.ProductID);
+                        var rating = (double)random.Next(42, 51) / 10;
+                        var soldCount = random.Next(10, 500);
+                        var hasDiscount = item.Price > 1000000 || item.ProductID % 4 == 0;
+                        var discountPercent = hasDiscount ? random.Next(5, 25) : 0;
+
+                        <a asp-controller="Product" asp-action="Detail" asp-route-id="@item.ProductID" class="sv-product-card shadow-none">
+                            <div class="sv-product-image-wrapper">
+                                <img src="@(string.IsNullOrEmpty(item.Photo) ? WebConfig.ImageServerUrl + "/images/products/nophoto.png" : $"{WebConfig.ImageServerUrl}/images/products/{item.Photo}")" 
+                                     class="sv-product-image" alt="@item.ProductName" onerror="this.src='@(WebConfig.ImageServerUrl + "/images/products/nophoto.png")'">
+                                <div class="sv-badge-top">
+                                    @if(hasDiscount) {
+                                        <span class="badge bg-danger rounded-1 py-1" style="font-size: 0.6rem;">GIÁ TỐT</span>
+                                    }
+                                    <img src="https://salt.tikicdn.com/ts/upload/51/e2/2b/ef384d436f584f22687bad377926b055.png" height="14" alt="SVFast">
+                                </div>
+                            </div>
+                            <div class="sv-product-info">
+                                <h6 class="sv-product-title" style="font-size: 0.85rem;">@item.ProductName</h6>
+                                <div class="sv-rating">
+                                    <div class="stars">
+                                        @for(int i=0; i<5; i++) {
+                                            <i class="fa-solid fa-star @(i < (int)rating ? "text-warning" : "text-light")" style="font-size: 9px;"></i>
+                                        }
+                                    </div>
+                                    <span class="ms-1 border-start ps-2 text-muted" style="font-size: 0.7rem;">Đã bán @soldCount</span>
+                                </div>
+                                <div class="sv-price-row">
+                                    <span class="sv-current-price" style="font-size: 1rem;">@item.Price.ToString("N0")<sup>đ</sup></span>
+                                    @if(hasDiscount) {
+                                        <span class="sv-discount-badge">-@discountPercent%</span>
+                                    }
+                                </div>
+                            </div>
+                        </a>
+                    }
+                }
+                else
+                {
+                    <div class="col-12 text-center py-5">
+                        <p class="text-muted">Chưa có sản phẩm gợi ý.</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Explicitly initialize and start the carousel
+            var myCarousel = document.querySelector('#SVBanner');
+            var carousel = new bootstrap.Carousel(myCarousel, {
+                interval: 3000,
+                ride: 'carousel',
+                pause: false // Set to false to prevent pause on hover
+            });
+            carousel.cycle();
+        });
+    </script>
+}

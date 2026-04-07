@@ -1,0 +1,28 @@
+@model SV22T1020673.Models.Sales.CartItem
+@{
+    Layout = null;
+}
+<div class="modal-header text-bg-danger">
+    <strong class="modal-title">
+        <i class="bi bi-trash"></i> Xóa mặt hàng khỏi giỏ hàng
+    </strong>
+    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+    <div class="alert alert-danger d-flex align-items-center mb-3">
+        <i class="bi bi-exclamation-triangle-fill me-2 fs-4"></i>
+        Bạn có muốn xóa mặt hàng này ra khỏi giỏ hàng không?
+    </div>
+</div>
+
+<div class="modal-footer bg-light">
+    <button type="button" id="btnConfirmDeleteCartItem" class="btn btn-danger px-4" onclick="deleteCartItem(@ViewBag.ProductID)">
+        <i class="bi bi-check-lg"></i> Chấp nhận
+    </button>
+    <button type="button"
+            class="btn btn-secondary px-4"
+            data-bs-dismiss="modal">
+        Bỏ qua
+    </button>
+</div>

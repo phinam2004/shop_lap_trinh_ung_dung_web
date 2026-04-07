@@ -1,0 +1,439 @@
+@model SV22T1020673.Models.Catalog.Product
+@{
+    ViewData["Title"] = Model.ProductName;
+    var category = ViewBag.Category as SV22T1020673.Models.Catalog.Category;
+    var attributes = ViewBag.Attributes as List<SV22T1020673.Models.Catalog.ProductAttribute>;
+    var photos = ViewBag.Photos as List<SV22T1020673.Models.Catalog.ProductPhoto>;
+    var relatedProducts = ViewBag.RelatedProducts as List<SV22T1020673.Models.Catalog.Product>;
+}
+
+<div class="animate-fade-in marketplace-container">
+    @* Top Breadcrumb *@
+    <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb bg-white p-3 rounded-2 shadow-sm">
+            <li class="breadcrumb-item"><a asp-action="Index" class="text-decoration-none">SVShop</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index" class="text-decoration-none">Sản phẩm</a></li>
+            @if (category != null)
+            {
+                <li class="breadcrumb-item"><a asp-action="Index" asp-route-CategoryID="@category.CategoryID" class="text-decoration-none">@category.CategoryName</a></li>
+            }
+            <li class="breadcrumb-item active text-truncate" style="max-width: 300px;">@Model.ProductName</li>
+        </ol>
+    </nav>
+
+    <div class="card border-0 shadow-sm rounded-3 overflow-hidden mb-5">
+        <div class="row g-0">
+            @* Left: Image Gallery (Shopee Style) *@
+            <div class="col-lg-5 p-4 border-end">
+                <div class="main-image-container position-relative mb-3 bg-light rounded-2 overflow-hidden" style="height: 450px;">
+                    <img id="mainImage" src="@(string.IsNullOrEmpty(Model.Photo) ? WebConfig.ImageServerUrl + "/images/products/nophoto.png" : WebConfig.ImageServerUrl + "/images/products/" + Model.Photo)" 
+                         class="img-fluid w-100 h-100" style="object-fit: contain;" alt="@Model.ProductName">
+                    @if (Model.Price > 0)
+                    {
+                        <div class="discount-ribbon">Giảm 15%</div>
+                    }
+                </div>
+                
+                @if (photos != null && photos.Count > 0)
+                {
+                    <div class="thumbnail-slider d-flex gap-2 overflow-auto pb-2">
+                        <div class="thumb-wrapper active" onclick="changeImage(this, '@(string.IsNullOrEmpty(Model.Photo) ? WebConfig.ImageServerUrl + "/images/products/nophoto.png" : WebConfig.ImageServerUrl + "/images/products/" + Model.Photo)')">
+                            <img src="@(string.IsNullOrEmpty(Model.Photo) ? WebConfig.ImageServerUrl + "/images/products/nophoto.png" : WebConfig.ImageServerUrl + "/images/products/" + Model.Photo)" class="img-fluid rounded-1">
+                        </div>
+                        @foreach (var p in photos)
+                        {
+                            <div class="thumb-wrapper" onclick="changeImage(this, '@(WebConfig.ImageServerUrl + "/images/products/" + p.Photo)')">
+                                <img src="@(WebConfig.ImageServerUrl + "/images/products/" + p.Photo)" class="img-fluid rounded-1">
+                            </div>
+                        }
+                    </div>
+                }
+
+                <div class="mt-4 pt-3 border-top d-flex justify-content-center gap-4 align-items-center">
+                    <div class="share-links">
+                        <span class="small text-muted me-2">Chia sẻ:</span>
+                        <a href="#" class="text-primary me-2"><i class="fa-brands fa-facebook fs-4"></i></a>
+                        <a href="#" class="text-info me-2"><i class="fa-brands fa-messenger fs-4"></i></a>
+                        <a href="#" class="text-danger me-2"><i class="fa-brands fa-pinterest fs-4"></i></a>
+                        <a href="#" class="text-primary"><i class="fa-brands fa-twitter fs-4"></i></a>
+                    </div>
+                    <div class="vr"></div>
+                    <div class="like-button cursor-pointer">
+                        <i class="fa-regular fa-heart text-danger fs-4 me-1"></i>
+                        <span class="small">Đã thích (1.2k)</span>
+                    </div>
+                </div>
+            </div>
+
+            @* Right: Product Details (Shopee Style) *@
+            <div class="col-lg-7 p-4">
+                <div class="product-header-section mb-3">
+                    @if (Model.Price > 500000)
+                    {
+                        <span class="badge bg-danger rounded-1 mb-2 px-2 py-1"><i class="fa-solid fa-bolt me-1"></i> Yêu thích+</span>
+                    }
+                    <h1 class="h3 fw-medium mb-2 text-dark">@Model.ProductName</h1>
+                    
+                    <div class="d-flex align-items-center gap-3 mb-3 small text-muted">
+                        <div class="stars text-warning">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="text-dark border-bottom ms-1">4.5</span>
+                        </div>
+                        <div class="vr"></div>
+                        <div><span class="text-dark border-bottom">120</span> Đánh giá</div>
+                        <div class="vr"></div>
+                        <div><span class="text-dark">850</span> Đã bán</div>
+                    </div>
+                </div>
+
+                @* Shopee Price Box *@
+                <div class="price-container p-4 rounded-2 mb-4" style="background-color: #fafafa;">
+                    <div class="d-flex align-items-center gap-3 mb-2">
+                        <span class="text-muted text-decoration-line-through fs-5">@( (Model.Price * 1.15m).ToString("N0") ) đ</span>
+                        <span class="h1 fw-bold text-danger mb-0">@Model.Price.ToString("N0") đ</span>
+                        <span class="badge bg-danger rounded-pill px-2 py-1 small">15% GIẢM</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 mt-2">
+                        <span class="badge bg-danger-subtle text-danger rounded-1 px-2 border border-danger small">Gì cũng rẻ</span>
+                        <span class="text-danger small"><i class="fa-solid fa-circle-question"></i></span>
+                    </div>
+                </div>
+
+                @* Shipping & Vouchers *@
+                <div class="shipping-voucher-section mb-4 px-2">
+                    <div class="row align-items-center mb-3">
+                        <div class="col-3 text-muted">Mã Giảm Giá Của Shop</div>
+                        <div class="col-9">
+                            <span class="badge bg-warning-subtle text-warning border border-warning rounded-0 px-2 py-1 me-2">Giảm 5k</span>
+                            <span class="badge bg-warning-subtle text-warning border border-warning rounded-0 px-2 py-1">Giảm 10k</span>
+                        </div>
+                    </div>
+                    <div class="row align-items-start mb-3">
+                        <div class="col-3 text-muted">Vận Chuyển</div>
+                        <div class="col-9">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <i class="fa-solid fa-truck-fast text-success fs-5"></i>
+                                <span class="fw-medium">Miễn phí vận chuyển</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <i class="fa-solid fa-location-dot text-muted mt-1"></i>
+                                <div>
+                                    <div class="small">Vận chuyển đến: <strong>An Giang, Huyện Châu Thành</strong> <i class="fa-solid fa-angle-down ms-1"></i></div>
+                                    <div class="small text-muted mt-1">Phí vận chuyển: 0đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @* Quantity & Actions *@
+                <div class="purchase-section mb-4 px-2">
+                    <div class="row align-items-center mb-4">
+                        <div class="col-3 text-muted">Số Lượng</div>
+                        <div class="col-9">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="input-group quantity-input-group border rounded-1 overflow-hidden" style="width: 120px; height: 32px;">
+                                    <button class="btn btn-light border-0 px-2 d-flex align-items-center" type="button" onclick="updateQty(-1)"><i class="fa-solid fa-minus small"></i></button>
+                                    <input type="text" id="quantity_input" class="form-control text-center border-0 p-0 fw-medium" value="1" readonly>
+                                    <button class="btn btn-light border-0 px-2 d-flex align-items-center" type="button" onclick="updateQty(1)"><i class="fa-solid fa-plus small"></i></button>
+                                </div>
+                                <span class="small text-muted">@Model.Unit có sẵn</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mt-4">
+                        <div class="col-6">
+                            <form action="@Url.Action("Add", "Cart")" method="post" id="addToCartForm">
+                                <input type="hidden" name="id" value="@Model.ProductID" />
+                                <input type="hidden" name="quantity" id="quantity_hidden" value="1" />
+                                <button type="submit" class="btn btn-add-cart w-100 py-3 rounded-2 shadow-sm">
+                                    <i class="fa-solid fa-cart-plus me-2"></i>Thêm Vào Giỏ
+                                </button>
+                            </form>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-buy-now w-100 py-3 text-white rounded-2 shadow-sm">
+                                Mua Ngay
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-top pt-3 mt-4">
+                    <div class="d-flex gap-4 small text-muted">
+                        <span><i class="fa-solid fa-shield-halved text-danger me-1"></i> SVShop Đảm Bảo</span>
+                        <span>7 Ngày Miễn Phí Trả Hàng</span>
+                        <span>Hàng Chính Hãng 100%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* Bottom Section: Shop, Details, Related *@
+    <div class="row g-4">
+        @* Left Bottom: Details & Description *@
+        <div class="col-lg-9">
+            <div class="card border-0 shadow-sm p-4 mb-4">
+                <h5 class="fw-bold mb-4 p-3 bg-light rounded-1 text-uppercase small">CHI TIẾT SẢN PHẨM</h5>
+                <div class="attributes-list px-3">
+                    <div class="row mb-3">
+                        <div class="col-3 text-muted">Danh Mục</div>
+                        <div class="col-9"><span class="text-primary fw-medium">SVShop > @category?.CategoryName</span></div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3 text-muted">Mã Sản Phẩm</div>
+                        <div class="col-9">#@Model.ProductID</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3 text-muted">Đơn Vị Tính</div>
+                        <div class="col-9">@Model.Unit</div>
+                    </div>
+                    @if (attributes != null)
+                    {
+                        foreach (var attr in attributes.OrderBy(a => a.DisplayOrder))
+                        {
+                            <div class="row mb-3">
+                                <div class="col-3 text-muted">@attr.AttributeName</div>
+                                <div class="col-9">@attr.AttributeValue</div>
+                            </div>
+                        }
+                    }
+                </div>
+
+                <h5 class="fw-bold mb-4 mt-5 p-3 bg-light rounded-1 text-uppercase small">MÔ TẢ SẢN PHẨM</h5>
+                <div class="description-text px-3 lh-lg text-secondary">
+                    @Model.ProductDescription
+                    <p class="mt-4">Sản phẩm chất lượng cao từ SVShop. Cam kết mang lại trải nghiệm tốt nhất cho người dùng.</p>
+                </div>
+            </div>
+        </div>
+
+        @* Right Bottom: Related Products (Shopee Column Recommendation) *@
+        <div class="col-lg-3">
+            <div class="card border-0 shadow-sm p-3">
+                <h6 class="fw-bold mb-3 border-bottom pb-2">Top Sản Phẩm Liên Quan</h6>
+                @if (relatedProducts != null && relatedProducts.Any())
+                {
+                    <div class="related-list">
+                        @foreach (var p in relatedProducts)
+                        {
+                            <a href="@Url.Action("Detail", "Product", new { id = p.ProductID })" class="text-decoration-none text-dark d-block mb-4 related-item">
+                                <div class="related-img-box mb-2 rounded-1 overflow-hidden" style="height: 180px;">
+                                    <img src="@(string.IsNullOrEmpty(p.Photo) ? WebConfig.ImageServerUrl + "/images/products/nophoto.png" : WebConfig.ImageServerUrl + "/images/products/" + p.Photo)" 
+                                         class="img-fluid w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="related-info p-1">
+                                    <div class="small fw-medium text-truncate-2 mb-1" style="height: 2.4em; overflow: hidden;">@p.ProductName</div>
+                                    <div class="text-danger fw-bold">@p.Price.ToString("N0") đ</div>
+                                </div>
+                            </a>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p class="small text-muted text-center py-4 italic">Chưa có sản phẩm tương tự.</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function changeImage(el, src) {
+            document.getElementById('mainImage').src = src;
+            $('.thumb-wrapper').removeClass('active');
+            $(el).addClass('active');
+            
+            // Visual feedback loop
+            $('#mainImage').fadeOut(100).fadeIn(100);
+        }
+
+        function updateQty(val) {
+            const input = document.getElementById('quantity_input');
+            const hiddenInput = document.getElementById('quantity_hidden');
+            let current = parseInt(input.value);
+            current = isNaN(current) ? 1 : current + val;
+            if (current < 1) current = 1;
+            input.value = current;
+            hiddenInput.value = current;
+        }
+
+        $(document).ready(function() {
+            // Add to Cart AJAX handler
+            $('#addToCartForm').on('submit', function(e) {
+                e.preventDefault();
+                const form = $(this);
+                const url = form.attr('action');
+                const data = form.serialize();
+
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: data,
+                    success: function(response) {
+                        if (response.success) {
+                            // Update global count
+                            if (window.updateCartCount) window.updateCartCount();
+                            // Show success notification
+                            if (window.showCartToast) window.showCartToast("Đã thêm " + $('#quantity_input').val() + " sản phẩm vào giỏ hàng.");
+                        }
+                    },
+                    error: function() {
+                        alert("Có lỗi xảy ra khi thêm vào giỏ hàng.");
+                    }
+                });
+            });
+
+            // Buy Now handler
+            $('.btn-buy-now').on('click', function() {
+                const form = $('#addToCartForm');
+                const url = form.attr('action');
+                const data = form.serialize();
+
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: data,
+                    success: function(response) {
+                        // After successfully adding, redirect to cart
+                        window.location.href = '@Url.Action("Index", "Cart")';
+                    },
+                    error: function() {
+                        alert("Có lỗi xảy ra. Vui lòng thử lại.");
+                    }
+                });
+            });
+        });
+    </script>
+}
+
+<style>
+    :root {
+        --sv-blue: #0b74e5;
+        --sv-blue-light: #0b74e515;
+    }
+
+    /* Force red for marketplace elements ONLY, using high specificity */
+    .marketplace-container .bg-danger,
+    .marketplace-container .bg-danger-pill,
+    .marketplace-container span.badge.bg-danger { 
+        background-color: #ee4d2d !important; 
+        color: #ffffff !important;
+    }
+    
+    .marketplace-container .text-danger { 
+        color: #ee4d2d !important; 
+    }
+    
+    .marketplace-container .border-danger { 
+        border-color: #ee4d2d !important; 
+    }
+    
+    .marketplace-container .bg-danger-subtle { 
+        background-color: #fff1f0 !important; 
+        color: #ee4d2d !important;
+        border: 1px solid #ee4d2d !important;
+    }
+
+    .marketplace-container {
+        padding-bottom: 5rem;
+    }
+
+    .main-image-container {
+        border: 1px solid #f0f0f0;
+    }
+
+    .discount-ribbon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #ffe91f;
+        color: #ee4d2d;
+        padding: 4px 8px;
+        font-weight: bold;
+        font-size: 0.8rem;
+        border-bottom-left-radius: 4px;
+        box-shadow: -2px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .thumb-wrapper {
+        min-width: 80px;
+        height: 80px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all 0.2s;
+    }
+
+    .thumb-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .thumb-wrapper:hover, .thumb-wrapper.active {
+        border-color: var(--sv-blue);
+    }
+
+    .text-truncate-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .btn-add-cart {
+        background-color: var(--sv-blue-light) !important;
+        border: 1px solid var(--sv-blue) !important;
+        color: var(--sv-blue) !important;
+        transition: all 0.3s;
+    }
+
+    .btn-add-cart:hover {
+        background-color: #0b74e525 !important;
+        color: #085cb5 !important;
+    }
+
+    .btn-buy-now {
+        background-color: var(--sv-blue) !important;
+        border: 1px solid var(--sv-blue) !important;
+        color: #ffffff !important;
+    }
+
+    .btn-buy-now:hover {
+        background-color: #085cb5 !important;
+        border-color: #085cb5 !important;
+    }
+
+    .quantity-input-group button {
+        background: white;
+    }
+
+    .related-item {
+        transition: transform 0.2s;
+    }
+
+    .related-item:hover {
+        transform: translateY(-3px);
+    }
+
+    .related-img-box {
+        border: 1px solid #eee;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        content: "\f105";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        color: #ccc;
+    }
+
+    .cursor-pointer { cursor: pointer; }
+</style>

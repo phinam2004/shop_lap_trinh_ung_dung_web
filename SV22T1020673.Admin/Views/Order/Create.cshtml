@@ -1,0 +1,210 @@
+@model ProductSearchInput
+@{
+    ViewBag.Title = "Lập đơn hàng";
+}
+
+<div class="row">
+    <!-- Tìm kiếm & chọn mặt hàng -->
+    <div class="col-4">
+        <div class="card card-outline card-primary h-100">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="bi bi-search"></i>
+                    Lựa chọn hàng cần bán
+                </h5>
+            </div>
+
+            <div class="card-body">
+                <!-- Search -->
+                <form id="formSearch" method="get" action="~/Order/SearchProduct" data-target="searchResult" onsubmit="paginationSearch(event, this, 1); return false;">
+                    <div class="input-group">
+                        <input type="hidden" name="pageSize" value="3" />
+                        <input class="form-control"
+                               name="searchValue"
+                               placeholder="Nhập tên mặt hàng cần tìm" autofocus />
+                        <button class="btn btn-primary">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Danh sách mặt hàng -->
+                <div id="searchResult"></div>
+            </div>
+
+            <div class="card-footer">
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Giỏ hàng và thông tin khách hàng -->
+    <div class="col-8">
+        <!-- Giỏ hàng -->
+        <div class="row">
+            <div class="col-12" id="shoppingCart">
+               
+            </div>
+        </div>
+        <!-- Thông tin khách hàng và nơi giao hàng -->
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="card card-outline card-info">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="bi bi-person"></i>
+                            Thông tin khách hàng & nơi giao hàng
+                        </h5>
+                    </div>
+
+                    <div class="card-body">
+                        <form method="post" action="~/Order/CreateOrder" onsubmit="createOrder(event, this)">
+                            <div class="row mb-3">
+                                <label class="col-md-2 col-form-label">Khách hàng</label>
+                                <div class="col-md-10">
+                                    <select class="form-select" name="customerID" asp-items="await SelectListHelper.Customers()">
+                                        <option value="0">-- Chọn khách hàng --</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label class="col-md-2 col-form-label">Tỉnh/thành</label>
+                                <div class="col-md-10">
+                                    <select class="form-select" name="province" asp-items="await SelectListHelper.Provinces()">
+                                        <option>-- Chọn Tỉnh/thành giao hàng --</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label class="col-md-2 col-form-label">Địa chỉ</label>
+                                <div class="col-md-10">
+                                    <textarea class="form-control" name="address"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="text-end">
+                                <button class="btn btn-primary">
+                                    <i class="bi bi-check-circle"></i>
+                                    Lập đơn hàng
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        function showShoppingCart() {
+            fetch("/Order/ShowCart")
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById("shoppingCart").innerHTML = html;
+                });
+        }
+
+        function addCartItem(event, form) {
+            if (event) event.preventDefault();
+            const url = form.action;
+            const method = (form.method || "POST").toUpperCase();
+            const formData = new FormData(form);
+
+            fetch(url, {
+                method: method,
+                body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.code === 1) {
+                    showShoppingCart();
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(() => {
+                alert("Không thêm được mặt hàng vào giỏ");
+            });
+        }
+
+        function deleteCartItem(productId) {
+            fetch(`/Order/DeleteCartItem?productId=${productId}`, { method: "POST" })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.code === 1) {
+                        showShoppingCart();
+                        bootstrap.Modal.getInstance(document.getElementById("dialogModal")).hide();
+                    } else {
+                        alert(data.message);
+                    }
+                });
+        }
+
+        function clearCart() {
+            fetch("/Order/ClearCart", { method: "POST" })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.code === 1) {
+                        showShoppingCart();
+                        bootstrap.Modal.getInstance(document.getElementById("dialogModal")).hide();
+                    } else {
+                        alert(data.message);
+                    }
+                });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            paginationSearch(null, document.getElementById("formSearch"), @Model.Page);
+            showShoppingCart();
+
+            // Intercept modal form submission
+            const modalEl = document.getElementById("dialogModal");
+            modalEl.addEventListener("submit", function (e) {
+                if (e.target.id === "formUpdateCartItem") {
+                    e.preventDefault();
+                    const form = e.target;
+                    const formData = new FormData(form);
+                    fetch(form.action, {
+                        method: "POST",
+                        body: formData
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.code === 1) {
+                            showShoppingCart();
+                            bootstrap.Modal.getInstance(modalEl).hide();
+                        } else {
+                            alert(data.message);
+                        }
+                    })
+                    .catch(() => alert("Không cập nhật được giỏ hàng"));
+                }
+            });
+        });
+        function createOrder(event, form) {
+            if (event) event.preventDefault();
+            const url = form.action;
+            const method = form.method || "POST";
+            const formData = new FormData(form);
+            
+            fetch(url, {
+                method: method,
+                body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.code > 0) {
+                    window.location.href = `/Order/Detail/${data.code}`;
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(() => {
+                alert("Không lập được đơn hàng");
+            });
+        }
+    </script>
+}

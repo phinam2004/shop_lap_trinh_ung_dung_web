@@ -1,0 +1,53 @@
+﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using SV22T1020673.Models.Partner;
+
+namespace SV22T1020673.Shop.Pages.Account
+{
+    public class RegisterModel : PageModel
+    {
+        [BindProperty]
+        public RegisterInputModel Input { get; set; }
+        public string? ErrorMessage { get; set; }
+
+        public void OnGet()
+        {
+        }
+
+        public IActionResult OnPost()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            // TODO: Kiểm tra email đã tồn tại chưa (giả sử có CustomerRepository)
+            // TODO: Lưu thông tin khách hàng mới vào database
+            // Ví dụ đơn giản:
+            // var customer = new Customer { FullName = Input.FullName, Email = Input.Email, Password = Input.Password };
+            // _customerRepository.Create(customer);
+
+            // Chuyển hướng sang trang đăng nhập hoặc thông báo thành công
+            return RedirectToPage("/Account/Login");
+        }
+    }
+
+    public class RegisterInputModel
+    {
+        [Required(ErrorMessage = "Họ và tên không được để trống")]
+        public string FullName { get; set; }
+
+        [Required(ErrorMessage = "Email không được để trống")]
+        [EmailAddress(ErrorMessage = "Email không hợp lệ")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Mật khẩu không được để trống")]
+        [MinLength(6, ErrorMessage = "Mật khẩu phải có ít nhất 6 ký tự")]
+        public string Password { get; set; }
+
+        [Required(ErrorMessage = "Xác nhận mật khẩu không được để trống")]
+        [Compare("Password", ErrorMessage = "Mật khẩu xác nhận không khớp")]
+        public string ConfirmPassword { get; set; }
+    }
+}

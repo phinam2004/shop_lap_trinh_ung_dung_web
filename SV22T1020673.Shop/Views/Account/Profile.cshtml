@@ -1,0 +1,87 @@
+@model SV22T1020673.Models.Partner.Customer
+@{
+    ViewData["Title"] = "Thông tin cá nhân";
+}
+
+<div class="hero-section mb-0">
+    <div class="container d-flex align-items-center">
+        <div class="bg-white rounded-circle p-3 shadow-sm me-4">
+            <i class="fa-solid fa-user-tie fs-1 text-primary"></i>
+        </div>
+        <div>
+            <h1 class="fw-bold mb-1">Hồ sơ cá nhân</h1>
+            <p class="text-muted mb-0">Quản lý thông tin tài khoản và địa chỉ của bạn.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-top: -3rem;">
+    <div class="row">
+        <div class="col-lg-4 mb-4">
+            @await Html.PartialAsync("_AccountSidebar")
+        </div>
+
+        <div class="col-lg-8">
+            <div class="card p-4 p-md-5 fade-in">
+                <h5 class="fw-bold mb-4">Cập nhật thông tin</h5>
+                
+                @if (ViewBag.Message != null)
+                {
+                    <div class="alert alert-success border-0 shadow-sm mb-4 fade show" role="alert">
+                        <i class="fa-solid fa-circle-check me-2"></i>@ViewBag.Message
+                    </div>
+                }
+
+                <form asp-action="Profile" method="post">
+                    <input type="hidden" asp-for="CustomerID" />
+                    <input type="hidden" asp-for="Email" />
+                    <input type="hidden" asp-for="Password" />
+                    <input type="hidden" asp-for="IsLocked" />
+
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <label asp-for="CustomerName" class="form-label fw-bold small">Họ và tên</label>
+                            <input asp-for="CustomerName" class="form-control" placeholder="Nguyễn Văn A">
+                            <span asp-validation-for="CustomerName" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="ContactName" class="form-label fw-bold small">Tên giao dịch</label>
+                            <input asp-for="ContactName" class="form-control" placeholder="Văn A">
+                            <span asp-validation-for="ContactName" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="Phone" class="form-label fw-bold small">Số điện thoại</label>
+                            <input asp-for="Phone" class="form-control" placeholder="090•••••••">
+                            <span asp-validation-for="Phone" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="Province" class="form-label fw-bold small">Tỉnh/Thành phố</label>
+                            <select asp-for="Province" class="form-select border-0 bg-light">
+                                <option value="">-- Chọn Tỉnh/Thành --</option>
+                                @if (ViewBag.Provinces != null)
+                                {
+                                    foreach (var p in ViewBag.Provinces as List<SV22T1020673.Models.DataDictionary.Province>)
+                                    {
+                                        <option value="@p.ProvinceName" selected="@(p.ProvinceName == Model.Province)">@p.ProvinceName</option>
+                                    }
+                                }
+                            </select>
+                            <span asp-validation-for="Province" class="text-danger small"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="Address" class="form-label fw-bold small">Địa chỉ nhận hàng</label>
+                            <input asp-for="Address" class="form-control" placeholder="Số nhà, đường, phường/xã...">
+                            <span asp-validation-for="Address" class="text-danger small"></span>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 border-top pt-4">
+                        <button type="submit" class="btn btn-primary px-5 shadow-sm">
+                            <i class="fa-solid fa-floppy-disk me-2"></i>Lưu thay đổi
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

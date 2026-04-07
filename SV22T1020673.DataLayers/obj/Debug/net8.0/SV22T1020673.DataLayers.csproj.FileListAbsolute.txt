@@ -1,0 +1,15 @@
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.DataLayers\bin\Debug\net8.0\SV22T1020673.DataLayers.deps.json
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.DataLayers\bin\Debug\net8.0\SV22T1020673.DataLayers.dll
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.DataLayers\bin\Debug\net8.0\SV22T1020673.DataLayers.pdb
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.DataLayers\bin\Debug\net8.0\SV22T1020673.Models.dll
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.DataLayers\bin\Debug\net8.0\SV22T1020673.Models.pdb
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.DataLayers\obj\Debug\net8.0\SV22T1020673.DataLayers.csproj.AssemblyReference.cache
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.DataLayers\obj\Debug\net8.0\SV22T1020673.DataLayers.GeneratedMSBuildEditorConfig.editorconfig
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.DataLayers\obj\Debug\net8.0\SV22T1020673.DataLayers.AssemblyInfoInputs.cache
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.DataLayers\obj\Debug\net8.0\SV22T1020673.DataLayers.AssemblyInfo.cs
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.DataLayers\obj\Debug\net8.0\SV22T1020673.DataLayers.csproj.CoreCompileInputs.cache
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.DataLayers\obj\Debug\net8.0\SV22T102.DBE78D26.Up2Date
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.DataLayers\obj\Debug\net8.0\SV22T1020673.DataLayers.dll
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.DataLayers\obj\Debug\net8.0\refint\SV22T1020673.DataLayers.dll
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.DataLayers\obj\Debug\net8.0\SV22T1020673.DataLayers.pdb
+d:\Hoc_tap\Lap_trinh_ung_ung_web\SV22T1020673\SV22T1020673\SV22T1020673.DataLayers\obj\Debug\net8.0\ref\SV22T1020673.DataLayers.dll

@@ -1,0 +1,46 @@
+@model SV22T1020673.Models.Sales.Order
+@{
+    Layout = null;
+}
+
+<div class="modal-header bg-primary text-white">
+    <h5 class="modal-title">Cập nhật thông tin giao hàng</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+
+<form action="~/Order/UpdateDetail/@Model.OrderID" method="post" class="modal-submit">
+    <div class="modal-body">
+        <div class="form-group row mb-4 mt-2">
+            <label class="col-sm-3 col-form-label fw-bold">Tỉnh / Thành</label>
+            <div class="col-sm-9">
+                <select class="form-select" name="deliveryProvince">
+                    <option value="">-- Chọn tỉnh/thành --</option>
+                    @foreach (var item in await SelectListHelper.Provinces())
+                    {
+                        if (item.Value == Model.DeliveryProvince)
+                        {
+                            <option value="@item.Value" selected>@item.Text</option>
+                        }
+                        else
+                        {
+                            <option value="@item.Value">@item.Text</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="form-group row mb-2">
+            <label class="col-sm-3 col-form-label fw-bold">Địa chỉ nhận</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" name="deliveryAddress" value="@Model.DeliveryAddress" placeholder="Nhập địa chỉ nhận hàng" />
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary px-4">
+            <i class="bi bi-save me-1"></i>
+            Lưu dữ liệu
+        </button>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Đóng</button>
+    </div>
+</form>

@@ -1,0 +1,28 @@
+@{
+    Layout = null;
+}
+<div class="modal-header text-bg-danger">
+    <strong class="modal-title">
+        <i class="bi bi-exclamation-triangle"></i> Xác nhận xóa giỏ hàng
+    </strong>
+    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body text-center py-4">
+    <div class="mb-3 text-danger">
+        <i class="bi bi-trash fs-1"></i>
+    </div>
+    <h5 class="fw-bold mb-3 text-dark">Bạn có chắc chắn muốn làm trống giỏ hàng?</h5>
+</div>
+
+<div class="modal-footer bg-light">
+    <button type="button" id="btnConfirmClearCart" class="btn btn-danger px-4 fw-bold" onclick="clearCart()">
+        <i class="bi bi-check-lg"></i> Chấp nhận
+    </button>
+    <button type="button"
+            class="btn btn-secondary px-4"
+            data-bs-dismiss="modal">
+        Bỏ qua
+    </button>
+</div>
+

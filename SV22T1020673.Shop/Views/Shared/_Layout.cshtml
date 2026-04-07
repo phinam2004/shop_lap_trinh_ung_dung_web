@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SVShop</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SV22T1020673.Shop.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="shadow-sm">
+        <!-- Main Header -->
+        <div class="sv-header">
+            <div class="container">
+                <div class="sv-header-top">
+                    <a class="sv-logo" asp-area="" asp-controller="Home" asp-action="Index">
+                        SVShop
+                        <span>Tốt & Nhanh</span>
+                    </a>
+
+                    <div class="sv-search-container">
+                        <form asp-controller="Product" asp-action="Index" method="get" class="sv-search-inner">
+                            <i class="fa-solid fa-magnifying-glass ms-3 align-self-center text-muted"></i>
+                            <input type="text" name="SearchValue" class="sv-search-input" placeholder="Freeship đơn từ 45k" value="@Context.Request.Query["SearchValue"]">
+                            <button type="submit" class="sv-search-btn">Tìm kiếm</button>
+                        </form>
+                        <div class="sv-search-suggestions">
+                            <a href="/Product?SearchValue=điện gia dụng">điện gia dụng</a>
+                            <a href="/Product?SearchValue=xe cộ">xe cộ</a>
+                            <a href="/Product?SearchValue=mẹ & bé">mẹ & bé</a>
+                            <a href="/Product?SearchValue=khỏe đẹp">khỏe đẹp</a>
+                            <a href="/Product?SearchValue=nhà cửa">nhà cửa</a>
+                            <a href="/Product?SearchValue=sách">sách</a>
+                        </div>
+                    </div>
+
+                    <div class="sv-header-actions">
+                        <a asp-controller="Home" asp-action="Index" class="sv-action-item">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Trang chủ</span>
+                        </a>
+
+                        @if (Context.Session.GetString("CustomerEmail") != null)
+                        {
+                            <div class="dropdown">
+                                <a href="#" class="sv-action-item dropdown-toggle" data-bs-toggle="dropdown">
+                                    <i class="fa-regular fa-face-smile"></i>
+                                    <span>@Context.Session.GetString("CustomerName")</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 mt-2 p-2" style="border-radius: 12px;">
+                                    <li><a class="dropdown-item rounded-3 py-2" asp-controller="Account" asp-action="Profile"><i class="fa-solid fa-user-gear me-2"></i>Hồ sơ cá nhân</a></li>
+                                    <li><a class="dropdown-item rounded-3 py-2" asp-controller="Order" asp-action="History"><i class="fa-solid fa-receipt me-2"></i>Đơn hàng</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item text-danger rounded-3 py-2" asp-controller="Account" asp-action="Logout"><i class="fa-solid fa-right-from-bracket me-2"></i>Đăng xuất</a></li>
+                                </ul>
+                            </div>
+                        }
+                        else
+                        {
+                            <a href="javascript:void(0)" class="sv-action-item" data-bs-toggle="modal" data-bs-target="#authModal">
+                                <i class="fa-regular fa-face-smile"></i>
+                                <span id="accountLabel">Tài khoản</span>
+                            </a>
+                        }
+
+                        <a asp-controller="Cart" asp-action="Index" class="sv-action-item sv-cart-btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="badge rounded-pill bg-danger shadow-sm" id="cartCount">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Commitment Bar -->
+        <div class="sv-commitment-bar">
+            <div class="container">
+                <ul class="sv-commitment-list">
+                    <li class="sv-commitment-label">Cam kết</li>
+                    <li class="sv-commitment-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>100% hàng thật</span>
+                    </li>
+                    <li class="sv-commitment-item border-start ps-3">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <span>Freeship mọi đơn</span>
+                    </li>
+                    <li class="sv-commitment-item border-start ps-3">
+                        <i class="fa-solid fa-rotate"></i>
+                        <span>Hoàn 200% nếu hàng giả</span>
+                    </li>
+                    <li class="sv-commitment-item border-start ps-3">
+                        <i class="fa-solid fa-box-open"></i>
+                        <span>30 ngày đổi trả</span>
+                    </li>
+                    <li class="sv-commitment-item border-start ps-3">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Giao nhanh 2h</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Toast Notification Holder -->
+    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 9999; margin-top: 80px;">
+        <div id="cartToast" class="toast border-0 rounded-4 shadow-lg" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex align-items-center p-2">
+                <div class="toast-body d-flex align-items-center gap-3">
+                    <div class="bg-success-subtle p-2 rounded-circle">
+                        <i class="fa-solid fa-check text-success"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-0 fw-bold">Thành công!</h6>
+                        <small class="text-muted" id="toastMessage">Sản phẩm đã được thêm vào giỏ.</small>
+                    </div>
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0">
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="auth-modal-body">
+                    <!-- Left: Form -->
+                    <div class="auth-modal-left" id="loginSect">
+                        <h3 class="auth-form-title">Xin chào,</h3>
+                        <p class="auth-form-sub">Đăng nhập hoặc Tạo tài khoản</p>
+                        
+                        <form id="loginForm">
+                            <div class="auth-input-group">
+                                <input type="email" name="email" class="auth-input" placeholder="Email" required>
+                            </div>
+                            <div class="auth-input-group">
+                                <input type="password" name="password" class="auth-input" placeholder="Mật khẩu" required>
+                            </div>
+                            <div class="auth-error-msg mb-3" id="loginGeneralErr" style="display:block"></div>
+                            
+                            <button type="submit" class="auth-submit-btn" id="btnLoginSubmit">Tiếp Tục</button>
+                        </form>
+                        
+                        <a href="javascript:void(0)" class="auth-switch-link" onclick="switchAuth('register')">Chưa có tài khoản? Đăng ký ngay</a>
+                    </div>
+
+                    <div class="auth-modal-left" id="registerSect" style="display:none">
+                        <h3 class="auth-form-title">Tạo tài khoản,</h3>
+                        <p class="auth-form-sub">Vui lòng điền thông tin bên dưới</p>
+                        
+                        <form id="registerForm">
+                            <div class="auth-input-group">
+                                <input type="email" name="email" class="auth-input" placeholder="Email" required>
+                            </div>
+                            <div class="auth-input-group">
+                                <input type="password" name="password" class="auth-input" placeholder="Mật khẩu" required>
+                            </div>
+                            <div class="auth-input-group">
+                                <input type="password" name="confirmPassword" class="auth-input" placeholder="Xác nhận mật khẩu" required>
+                            </div>
+                            <div class="auth-error-msg mb-3" id="registerErr" style="display:block"></div>
+                            
+                            <button type="submit" class="auth-submit-btn" id="btnRegisterSubmit">Đăng Ký</button>
+                        </form>
+                        
+                        <a href="javascript:void(0)" class="auth-switch-link" onclick="switchAuth('login')">Đã có tài khoản? Đăng nhập</a>
+                    </div>
+
+                    <!-- Right: Illustration -->
+                    <div class="auth-modal-right d-none d-md-flex">
+                        <img src="/images/illustrations/auth_illustration.png" alt="Auth Illustration">
+                        <h4>Mua sắm tại SVShop</h4>
+                        <p>Siêu ưu đãi mỗi ngày</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-5">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <h5 class="mb-4"><i class="fa-solid fa-bolt-lightning me-2"></i>SVShop</h5>
+                    <p class="text-muted pe-lg-5">Nền tảng thương mại điện tử hiện đại, mang lại trải nghiệm mua sắm tuyệt vời nhất cho khách hàng với các sản phẩm chất lượng cao.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="fs-4"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="fs-4"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="fs-4"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="text-white fw-bold mb-4">Khám phá</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a asp-controller="Home" asp-action="Index" class="text-decoration-none">Trang chủ</a></li>
+                        <li class="mb-2"><a asp-controller="Product" asp-action="Index" class="text-decoration-none">Sản phẩm</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Khuyến mãi</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="text-white fw-bold mb-4">Hỗ trợ</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Trung tâm trợ giúp</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Chính sách bảo mật</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Điều khoản sử dụng</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h6 class="text-white fw-bold mb-4">Liên hệ</h6>
+                    <p class="text-muted mb-2"><i class="fa-solid fa-location-dot me-3"></i>245 Bài thị xuân, Phường Đúc, TP Huế</p>
+                    <p class="text-muted mb-2"><i class="fa-solid fa-phone me-1"></i>(+84) 397798392</p>
+                    <p class="text-muted"><i class="fa-solid fa-envelope me-3"></i>support@svshop.com</p>
+                </div>
+            </div>
+            <hr class="my-5 border-secondary opacity-25">
+            <div class="d-flex justify-content-center align-items-center">
+                <span class="text-muted small">&copy; 2026 SVShop. All rights reserved. Design by SV22T1020673</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        // Auth Modal Switching
+        function switchAuth(type) {
+            $('.auth-error-msg').hide();
+            if (type === 'register') {
+                $('#loginSect').hide();
+                $('#registerSect').show();
+            } else {
+                $('#registerSect').hide();
+                $('#loginSect').show();
+            }
+        }
+
+        // Global Cart functions
+        window.updateCartCount = function() {
+            $.get('/Cart/GetCount', function(data) {
+                $('#cartCount').text(data.count);
+                if (data.count > 0) $('#cartCount').show();
+                else $('#cartCount').hide();
+            });
+        };
+
+        window.showCartToast = function(message) {
+            if (message) $('#toastMessage').text(message);
+            const toast = new bootstrap.Toast(document.getElementById('cartToast'));
+            toast.show();
+        };
+
+        $(document).ready(function() {
+            window.updateCartCount();
+
+            // Auto-open Auth Modal from URL params
+            const urlParams = new URLSearchParams(window.location.search);
+            const authType = urlParams.get('auth');
+            const isAuthenticated = @(Context.Session.GetString("CustomerEmail") != null ? "true" : "false");
+
+            if (!isAuthenticated) {
+                if (authType === 'login') {
+                    switchAuth('login');
+                    $('#authModal').modal('show');
+                } else if (authType === 'register') {
+                    switchAuth('register');
+                    $('#authModal').modal('show');
+                }
+            }
+
+            // Login AJAX
+            $('#loginForm').submit(function(e) {
+                e.preventDefault();
+                const btn = $('#btnLoginSubmit');
+                btn.prop('disabled', true).text('Đang xử lý...');
+                $('#loginGeneralErr').hide();
+
+                $.post('/Account/AjaxLogin', $(this).serialize(), function(res) {
+                    if (res.success) {
+                        window.location.href = '/';
+                    } else {
+                        $('#loginGeneralErr').text(res.message).show();
+                        btn.prop('disabled', false).text('Tiếp Tục');
+                    }
+                });
+            });
+
+            // Register AJAX
+            $('#registerForm').submit(function(e) {
+                e.preventDefault();
+                const btn = $('#btnRegisterSubmit');
+                btn.prop('disabled', true).text('Đang xử lý...');
+                $('#registerErr').hide();
+
+                $.post('/Account/AjaxRegister', $(this).serialize(), function(res) {
+                    if (res.success) {
+                        alert(res.message);
+                        switchAuth('login');
+                        btn.prop('disabled', false).text('Đăng Ký');
+                    } else {
+                        $('#registerErr').text(res.message).show();
+                        btn.prop('disabled', false).text('Đăng Ký');
+                    }
+                });
+            });
+        });
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,90 @@
+﻿@{
+}
+<div class="row justify-content-center">
+    <div class="col-lg-12">
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <i class="bi bi-building me-2"></i>
+                    Thông tin nhà cung cấp
+                </h3>
+            </div>
+
+            <form method="post" action="">
+                <div class="card-body">
+                    <div class="row g-3">
+                        <!-- Tên nhà cung cấp -->
+                        <div class="col-md-6">
+                            <label class="form-label">Tên nhà cung cấp</label>
+                            <input type="text"
+                                   name="SupplierName"
+                                   class="form-control"
+                                   placeholder="Nhập tên nhà cung cấp"
+                                   required>
+                        </div>
+
+                        <!-- Tên giao dịch -->
+                        <div class="col-md-6">
+                            <label class="form-label">Tên giao dịch</label>
+                            <input type="text"
+                                   name="ContactName"
+                                   class="form-control"
+                                   placeholder="Nhập tên giao dịch">
+                        </div>
+
+                        <!-- Điện thoại -->
+                        <div class="col-md-4">
+                            <label class="form-label">Điện thoại</label>
+                            <input type="tel"
+                                   name="Phone"
+                                   class="form-control"
+                                   placeholder="VD: 0901 234 567">
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-md-4">
+                            <label class="form-label">Email</label>
+                            <input type="email"
+                                   name="Email"
+                                   class="form-control"
+                                   placeholder="VD: abc@email.com">
+                        </div>
+
+                        <!-- Tỉnh / Thành -->
+                        <div class="col-md-4">
+                            <label class="form-label">Tỉnh / Thành</label>
+                            <select name="Province"
+                                    class="form-select">
+                                <option value="">-- Chọn tỉnh / thành --</option>
+                                <option>Hà Nội</option>
+                                <option>TP. Hồ Chí Minh</option>
+                                <option>Đà Nẵng</option>
+                                <option>Huế</option>
+                            </select>
+                        </div>
+
+                        <!-- Địa chỉ -->
+                        <div class="col-12">
+                            <label class="form-label">Địa chỉ</label>
+                            <textarea name="Address"
+                                      class="form-control"
+                                      rows="3"
+                                      placeholder="Nhập địa chỉ chi tiết"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer text-end">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-save me-1"></i>
+                        Lưu dữ liệu
+                    </button>
+                    <a href="~/Suppliter" class="btn btn-secondary ms-2">
+                        <i class="bi bi-arrow-left me-1"></i>
+                        Quay lại
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,156 @@
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\appsettings.Development.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\appsettings.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.staticwebassets.runtime.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.exe
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.deps.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.runtimeconfig.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.dll
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.pdb
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.AssemblyInfoInputs.cache
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.AssemblyInfo.cs
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.csproj.CoreCompileInputs.cache
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.RazorAssemblyInfo.cache
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.RazorAssemblyInfo.cs
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets.development.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets\msbuild.SV22T1020555.Shop.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets\msbuild.build.SV22T1020555.Shop.props
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets\msbuild.buildMultiTargeting.SV22T1020555.Shop.props
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets\msbuild.buildTransitive.SV22T1020555.Shop.props
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets.pack.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\scopedcss\bundle\SV22T1020555.Shop.styles.css
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\scopedcss\projectbundle\SV22T1020555.Shop.bundle.scp.css
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.dll
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\refint\SV22T1020555.Shop.dll
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.pdb
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.genruntimeconfig.cache
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\ref\SV22T1020555.Shop.dll
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\appsettings.Development.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\appsettings.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.staticwebassets.runtime.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.exe
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.deps.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.runtimeconfig.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.dll
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.pdb
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.AssemblyInfoInputs.cache
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.AssemblyInfo.cs
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.csproj.CoreCompileInputs.cache
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.RazorAssemblyInfo.cache
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.RazorAssemblyInfo.cs
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets.development.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets\msbuild.SV22T1020555.Shop.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets\msbuild.build.SV22T1020555.Shop.props
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets\msbuild.buildMultiTargeting.SV22T1020555.Shop.props
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets\msbuild.buildTransitive.SV22T1020555.Shop.props
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets.pack.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\scopedcss\bundle\SV22T1020555.Shop.styles.css
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\scopedcss\projectbundle\SV22T1020555.Shop.bundle.scp.css
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.dll
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\refint\SV22T1020555.Shop.dll
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.pdb
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.genruntimeconfig.cache
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\ref\SV22T1020555.Shop.dll
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\appsettings.Development.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\appsettings.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.staticwebassets.runtime.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.exe
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.deps.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.runtimeconfig.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.dll
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.pdb
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.AssemblyInfoInputs.cache
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.AssemblyInfo.cs
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.csproj.CoreCompileInputs.cache
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.RazorAssemblyInfo.cache
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.RazorAssemblyInfo.cs
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets.development.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets\msbuild.SV22T1020555.Shop.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets\msbuild.build.SV22T1020555.Shop.props
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets\msbuild.buildMultiTargeting.SV22T1020555.Shop.props
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets\msbuild.buildTransitive.SV22T1020555.Shop.props
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets.pack.json
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\scopedcss\bundle\SV22T1020555.Shop.styles.css
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\scopedcss\projectbundle\SV22T1020555.Shop.bundle.scp.css
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.dll
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\refint\SV22T1020555.Shop.dll
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.pdb
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.genruntimeconfig.cache
+C:\Users\lab\Downloads\SV22T1020555\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\ref\SV22T1020555.Shop.dll
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\appsettings.Development.json
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\appsettings.json
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.staticwebassets.runtime.json
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.staticwebassets.endpoints.json
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.exe
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.deps.json
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.runtimeconfig.json
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.dll
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.pdb
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\rpswa.dswa.cache.json
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.AssemblyInfoInputs.cache
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.AssemblyInfo.cs
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.csproj.CoreCompileInputs.cache
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.RazorAssemblyInfo.cache
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.RazorAssemblyInfo.cs
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\rjimswa.dswa.cache.json
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\scopedcss\bundle\SV22T1020555.Shop.styles.css
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\scopedcss\projectbundle\SV22T1020555.Shop.bundle.scp.css
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets.build.json.cache
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets.development.json
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets.build.endpoints.json
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.dll
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\refint\SV22T1020555.Shop.dll
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.pdb
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.genruntimeconfig.cache
+C:\Users\ALIENWARE\Downloads\SV22T1020555 (1)\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\ref\SV22T1020555.Shop.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\appsettings.Development.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\appsettings.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.staticwebassets.runtime.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.staticwebassets.endpoints.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.exe
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.deps.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.runtimeconfig.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\bin\Release\net8.0\SV22T1020555.Shop.pdb
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\rpswa.dswa.cache.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.AssemblyInfoInputs.cache
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.AssemblyInfo.cs
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.csproj.CoreCompileInputs.cache
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.RazorAssemblyInfo.cache
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.RazorAssemblyInfo.cs
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\rjimswa.dswa.cache.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\scopedcss\bundle\SV22T1020555.Shop.styles.css
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\scopedcss\projectbundle\SV22T1020555.Shop.bundle.scp.css
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets.build.json.cache
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets.development.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets.build.endpoints.json
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\refint\SV22T1020555.Shop.dll
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.pdb
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\SV22T1020555.Shop.genruntimeconfig.cache
+C:\Users\ALIENWARE\OneDrive\Pictures\Máy tính\BAITAP_LTUDW\SV22T1020555\SV22T1020555.Shop\obj\Release\net8.0\ref\SV22T1020555.Shop.dll

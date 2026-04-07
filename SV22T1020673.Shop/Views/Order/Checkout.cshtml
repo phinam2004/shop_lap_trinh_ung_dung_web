@@ -1,0 +1,104 @@
+@model SV22T1020673.Models.Sales.Order
+@{
+    ViewData["Title"] = "Thanh toán";
+    ViewData["Title"] = "Thanh toán đơn hàng";
+    var cart = ViewBag.Cart as List<SV22T1020673.Shop.Controllers.CartItem>;
+}
+
+<div class="hero-section mb-5 py-5">
+    <div class="container text-center text-md-start">
+        <h1 class="fw-bold mb-2">Thanh toán</h1>
+        <p class="text-muted mb-0">Hoàn tất thông tin để nhận hàng nhanh nhất.</p>
+    </div>
+</div>
+
+<div class="container" style="margin-top: -4rem;">
+    <form asp-action="Checkout" method="post">
+        <div class="row g-4">
+            <!-- Delivery Info -->
+            <div class="col-lg-7">
+                <div class="card p-4 p-md-5 border-0 shadow-sm fade-in">
+                    <h5 class="fw-bold mb-4"><i class="fa-solid fa-truck-ramp-box me-2 text-primary"></i>Thông tin nhận hàng</h5>
+                    
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <label class="form-label fw-bold small">Địa chỉ nhận hàng</label>
+                            <input asp-for="DeliveryAddress" class="form-control" placeholder="Số nhà, tên đường, phường/xã..." required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label fw-bold small">Tỉnh/Thành phố</label>
+                            <select asp-for="DeliveryProvince" class="form-select" required>
+                                <option value="">-- Chọn Tỉnh/Thành phố --</option>
+                                @if (ViewBag.Provinces != null)
+                                {
+                                    foreach (var p in ViewBag.Provinces as List<SV22T1020673.Models.DataDictionary.Province>)
+                                    {
+                                        <option value="@p.ProvinceName">@p.ProvinceName</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label fw-bold small">Số điện thoại liên hệ</label>
+                            <input type="text" name="deliveryPhone" class="form-control" value="@ViewBag.CustomerPhone" placeholder="Nhập số điện thoại nhận hàng" required>
+                        </div>
+                    </div>
+
+                    <h5 class="fw-bold mb-4 mt-5"><i class="fa-solid fa-credit-card me-2 text-primary"></i>Phương thức thanh toán</h5>
+                    <div class="card p-3 border-primary bg-primary-subtle rounded-4 mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="cod" checked>
+                            <label class="form-check-label fw-bold" for="cod">
+                                Thanh toán khi nhận hàng (COD)
+                            </label>
+                            <p class="text-muted small mb-0 mt-1">Giao hàng và thu tiền tận nơi trên toàn quốc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary Sidebar -->
+            <div class="col-lg-5">
+                <div class="card p-4 border-0 shadow-sm fade-in sticky-top" style="top: 100px;">
+                    <h5 class="fw-bold mb-4">Tóm tắt đơn hàng</h5>
+                    
+                    <div class="mb-4" style="max-height: 300px; overflow-y: auto;">
+                        @foreach (var item in cart)
+                        {
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="position-relative">
+                                    <img src="@(string.IsNullOrEmpty(item.Photo) ? WebConfig.ImageServerUrl + "/images/products/nophoto.png" : $"{WebConfig.ImageServerUrl}/images/products/{item.Photo}")" 
+                                         class="rounded-3 border" width="60" height="60" style="object-fit: cover;">
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary shadow-sm">@item.Quantity</span>
+                                </div>
+                                <div class="ms-3 flex-grow-1">
+                                    <h6 class="small fw-bold mb-0 text-truncate" style="max-width: 200px;">@item.ProductName</h6>
+                                    <p class="text-muted small mb-0">@item.Unit</p>
+                                </div>
+                                <span class="fw-bold small">@item.TotalPrice.ToString("N0") đ</span>
+                            </div>
+                        }
+                    </div>
+
+                    <div class="d-flex justify-content-between mb-4">
+                        <span class="text-muted">Phí vận chuyển</span>
+                        <span class="text-success fw-bold">Miễn phí</span>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between mb-4">
+                        <h5 class="fw-bold">Tổng thanh toán</h5>
+                        <h4 class="fw-bold text-primary">@cart.Sum(x => x.TotalPrice).ToString("N0") đ</h4>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 py-3 rounded-pill shadow">
+                        Xác nhận đặt hàng
+                    </button>
+                    
+                    <a asp-controller="Cart" asp-action="Index" class="btn btn-link w-100 text-muted mt-2 small text-decoration-none">
+                        Quay lại giỏ hàng
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

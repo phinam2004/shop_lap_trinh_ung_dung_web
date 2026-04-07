@@ -1,0 +1,66 @@
+@{
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+    var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+    var customerName = Context.Session.GetString("CustomerName") ?? "Khách hàng";
+    var customerEmail = Context.Session.GetString("CustomerEmail") ?? "";
+}
+
+<div class="card p-4 fade-in border-0 shadow-sm">
+    <div class="text-center mb-4">
+        <div class="position-relative d-inline-block mb-3">
+            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto shadow-sm" 
+                 style="width: 100px; height: 100px; font-size: 3rem; font-weight: 700;">
+                @(string.IsNullOrEmpty(customerName) ? "V" : customerName[0].ToString().ToUpper())
+            </div>
+            <button class="btn btn-sm btn-light position-absolute bottom-0 end-0 rounded-circle border-white border-2 p-2 shadow-sm">
+                <i class="fa-solid fa-camera text-muted"></i>
+            </button>
+        </div>
+        <h4 class="fw-bold mb-1">@customerName</h4>
+        <p class="text-muted small">@customerEmail</p>
+    </div>
+    
+    <hr class="my-4 border-light opacity-50">
+    
+    <div class="list-group list-group-flush account-menu">
+        <a asp-controller="Account" asp-action="Profile" 
+           class="list-group-item list-group-item-action border-0 rounded-3 mb-2 @(currentController == "Account" && currentAction == "Profile" ? "active" : "")">
+            <i class="fa-solid fa-user-pen me-3"></i>Thông tin cơ bản
+        </a>
+        <a asp-controller="Order" asp-action="History" 
+           class="list-group-item list-group-item-action border-0 rounded-3 mb-2 @(currentController == "Order" && (currentAction == "History" || currentAction == "Details") ? "active" : "")">
+            <i class="fa-solid fa-shopping-bag me-3"></i>Lịch sử mua hàng
+        </a>
+        <a asp-controller="Account" asp-action="ChangePassword" 
+           class="list-group-item list-group-item-action border-0 rounded-3 mb-2 @(currentController == "Account" && currentAction == "ChangePassword" ? "active" : "")">
+            <i class="fa-solid fa-key me-3"></i>Đổi mật khẩu
+        </a>
+        <a asp-controller="Account" asp-action="Logout" 
+           class="list-group-item list-group-item-action border-0 rounded-3 text-danger">
+            <i class="fa-solid fa-right-from-bracket me-3"></i>Đăng xuất
+        </a>
+    </div>
+</div>
+
+<style>
+    .account-menu .list-group-item {
+        padding: 12px 20px;
+        transition: all 0.2s;
+        font-weight: 500;
+        color: var(--tiki-text-main);
+    }
+    .account-menu .list-group-item:hover {
+        background-color: var(--bg-light);
+        color: var(--primary-color);
+        transform: translateX(5px);
+    }
+    .account-menu .list-group-item.active {
+        background-color: var(--primary-color) !important;
+        color: white !important;
+        box-shadow: 0 4px 12px rgba(11, 116, 229, 0.2);
+    }
+    .account-menu .list-group-item.text-danger:hover {
+        background-color: #fff1f0;
+        color: #ff424e !important;
+    }
+</style>
